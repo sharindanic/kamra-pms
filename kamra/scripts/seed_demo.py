@@ -151,6 +151,7 @@ def execute():
 				"amount_before_tax": 0,
 			}
 		)
+		doc.flags.allow_past_check_in = True
 		doc.insert(ignore_permissions=True)
 		if status != "Confirmed":
 			doc.status = status
